@@ -175,14 +175,15 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x5c5l"]
-radius = 40.012497
+radius = 22.0
 
 [node name="slug_player" type="CharacterBody2D" unique_id=1789177960]
 script = ExtResource("1_uo8lx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=635311530]
+texture_filter = 1
 material = SubResource("ShaderMaterial_8npmh")
-scale = Vector2(8, 8)
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_x5c5l")
 animation = &"move"
 autoplay = "idle"

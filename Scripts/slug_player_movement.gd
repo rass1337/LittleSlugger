@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var max_speed: float = 1000.0
 @export var accel: float = 3.0
 @export var turn_speed: float = 5.0
-var stop_rotate: float = 50
+var stop_rotate: float = 30
 
  #move the slug towards cursor
 func _physics_process(delta: float) -> void:
@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 		rotation = lerp_angle(rotation, to_mouse.angle() + deg_to_rad(90), 1.0 - exp(-turn_speed * delta))
 	
 #swaps between idle and move animation, speeds up the animation play speed depending on distance from cursor
-	if velocity.length() > 300.0:
+	if velocity.length() > 200.0:
 		animated_sprite.play("move")
 		var howfast = clamp(velocity.length() / max_speed, 0.0, 1.0) 
 		animated_sprite.speed_scale = lerp(1.0, 3.0, howfast)
