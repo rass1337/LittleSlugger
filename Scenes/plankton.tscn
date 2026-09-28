@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bdvq0rd8kqxhk"]
+
+[ext_resource type="Texture2D" uid="uid://dow61mgxurce3" path="res://CharacterArt/TS_plankton.png" id="1_h11cw"]
+[ext_resource type="Script" uid="uid://y6wxspgawa7f" path="res://Scripts/plankton_1.gd" id="1_rfhaq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfhaq"]
+atlas = ExtResource("1_h11cw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ah8tk"]
+atlas = ExtResource("1_h11cw")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jb7k"]
+atlas = ExtResource("1_h11cw")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x5c5l"]
+animations = [{
+"frames": [{
+"duration": 12.0,
+"texture": SubResource("AtlasTexture_rfhaq")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_ah8tk")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_5jb7k")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x5c5l"]
+radius = 15.0
+
+[node name="Plankton" type="Area2D" unique_id=991966870]
+script = ExtResource("1_rfhaq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1667472292]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_x5c5l")
+autoplay = "default"
+frame_progress = 0.24797975
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1931838330]
+shape = SubResource("CircleShape2D_x5c5l")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

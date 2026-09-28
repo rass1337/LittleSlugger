@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gsdivw6iek7b"
-path="res://.godot/imported/BunnySlug.png-e505eb2870eea0181e7b2921a4c56a2e.ctex"
+path="res://.godot/imported/TS_bunnySlug.png-ef8d7776b7de775fa54c1e422cdc0eea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CharacterArt/BunnySlug.png"
-dest_files=["res://.godot/imported/BunnySlug.png-e505eb2870eea0181e7b2921a4c56a2e.ctex"]
+source_file="res://CharacterArt/TS_bunnySlug.png"
+dest_files=["res://.godot/imported/TS_bunnySlug.png-ef8d7776b7de775fa54c1e422cdc0eea.ctex"]
 
 [params]
 

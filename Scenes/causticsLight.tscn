@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cpm1ftdehfu6t"]
+
+[ext_resource type="Texture2D" uid="uid://ducvnqolddb27" path="res://environmentArt/T_caustics.png" id="1_e2u1h"]
+[ext_resource type="Script" uid="uid://dppxji52s33vc" path="res://Scripts/caustics_light.gd" id="2_exlaf"]
+
+[node name="PointLight2D" type="PointLight2D" unique_id=498360917]
+color = Color(0.7372549, 1, 1, 1)
+range_item_cull_mask = 2
+texture = ExtResource("1_e2u1h")
+script = ExtResource("2_exlaf")

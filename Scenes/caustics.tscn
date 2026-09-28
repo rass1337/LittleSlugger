@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dm3csks0woyf7"]
+
+[ext_resource type="Texture2D" uid="uid://ducvnqolddb27" path="res://environmentArt/T_caustics.png" id="1_8vwej"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_x5c5l"]
+blend_mode = 1
+
+[node name="caustics" type="Node2D" unique_id=1452657868]
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1140066036]
+repeat_size = Vector2(1000, 1000)
+autoscroll = Vector2(-16, 12)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=1944918837]
+modulate = Color(0.38049966, 0.5220732, 0.5220732, 0.1764706)
+material = SubResource("CanvasItemMaterial_x5c5l")
+texture = ExtResource("1_8vwej")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=2131063180]
+repeat_size = Vector2(1000, 1000)
+autoscroll = Vector2(12, -20)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=2076665488]
+modulate = Color(0.38049966, 0.5220732, 0.5220732, 0.1764706)
+material = SubResource("CanvasItemMaterial_x5c5l")
+rotation = 3.1415927
+texture = ExtResource("1_8vwej")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4j7bdef6di6q"
-path="res://.godot/imported/UnderwaterEnvironment.png-7bb8ffcf00ffa9eb3e4277c7feb2cff2.ctex"
+uid="uid://b3bt3vrk1vtvy"
+path="res://.godot/imported/T_midDeep.png-a0f8c569891a5566c464197c6b3bc339.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://environmentArt/UnderwaterEnvironment.png"
-dest_files=["res://.godot/imported/UnderwaterEnvironment.png-7bb8ffcf00ffa9eb3e4277c7feb2cff2.ctex"]
+source_file="res://environmentArt/T_midDeep.png"
+dest_files=["res://.godot/imported/T_midDeep.png-a0f8c569891a5566c464197c6b3bc339.ctex"]
 
 [params]
 

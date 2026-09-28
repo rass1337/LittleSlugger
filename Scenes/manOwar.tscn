@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://6w85gtuakipv"]
+
+[ext_resource type="Script" uid="uid://mnyjfugj2j2l" path="res://Scripts/man_owar.gd" id="1_20gpn"]
+[ext_resource type="Texture2D" uid="uid://bwxcx38tp576l" path="res://CharacterArt/TS_manOwar.png" id="1_urp4j"]
+[ext_resource type="PackedScene" uid="uid://buf8gg2gxqh3j" path="res://Scenes/killzone.tscn" id="3_ixg6u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6xp4"]
+atlas = ExtResource("1_urp4j")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20gpn"]
+atlas = ExtResource("1_urp4j")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixg6u"]
+atlas = ExtResource("1_urp4j")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kx4gp"]
+atlas = ExtResource("1_urp4j")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x5c5l"]
+animations = [{
+"frames": [{
+"duration": 16.0,
+"texture": SubResource("AtlasTexture_m6xp4")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_20gpn")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_ixg6u")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_kx4gp")
+}],
+"loop": 1,
+"name": &"swim",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x5c5l"]
+radius = 31.016125
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ddkw0"]
+radius = 25.019993
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r60bl"]
+radius = 141.17365
+
+[node name="manOwar_chase" type="CharacterBody2D" unique_id=1901263816]
+script = ExtResource("1_20gpn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1217824617]
+modulate = Color(1, 0.6901961, 1, 1)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_x5c5l")
+animation = &"swim"
+autoplay = "swim"
+frame_progress = 0.73338526
+
+[node name="Killzone" parent="." unique_id=837038506 instance=ExtResource("3_ixg6u")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1880734321]
+shape = SubResource("CircleShape2D_x5c5l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=365968886]
+shape = SubResource("CircleShape2D_ddkw0")
+
+[node name="DetectRadius" type="Area2D" parent="." unique_id=1852119802]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectRadius" unique_id=1811845396]
+shape = SubResource("CircleShape2D_r60bl")
+
+[connection signal="body_entered" from="DetectRadius" to="." method="_on_detect_radius_body_entered"]
+[connection signal="body_exited" from="DetectRadius" to="." method="_on_detect_radius_body_exited"]

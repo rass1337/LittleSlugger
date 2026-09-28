@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ibp3xu6htpmh"]
+
+[ext_resource type="Texture2D" uid="uid://d3tvqgxc0vldl" path="res://environmentArt/T_Deep.png" id="1_vieis"]
+[ext_resource type="Texture2D" uid="uid://b3bt3vrk1vtvy" path="res://environmentArt/T_midDeep.png" id="2_n5moj"]
+[ext_resource type="Texture2D" uid="uid://ca81gd5o7ataf" path="res://environmentArt/T_nearDeep.png" id="3_acil8"]
+
+[node name="Background" type="Node2D" unique_id=1153917356]
+z_index = -2
+
+[node name="Far" type="Parallax2D" parent="." unique_id=1571314423]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(1120, 1120)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Far" unique_id=1573897876]
+modulate = Color(0.585062, 0.585062, 0.5850621, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_vieis")
+
+[node name="Mid" type="Parallax2D" parent="." unique_id=2134758811]
+scroll_scale = Vector2(0.25, 0.25)
+repeat_size = Vector2(1120, 1120)
+autoscroll = Vector2(-12, -12)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Mid" unique_id=1385621345]
+modulate = Color(0.27996668, 0.2799667, 0.27996668, 1)
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_n5moj")
+
+[node name="Near" type="Parallax2D" parent="." unique_id=346983814]
+scroll_scale = Vector2(0.4, 0.4)
+repeat_size = Vector2(1120, 1120)
+autoscroll = Vector2(12, -24)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Near" unique_id=556971913]
+modulate = Color(4.111713, 4.111713, 4.111713, 0.48235294)
+self_modulate = Color(0.27022192, 0.27022192, 0.2702219, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_acil8")

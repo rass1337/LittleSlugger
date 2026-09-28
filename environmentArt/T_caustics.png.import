@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvnkg7w8n37br"
-path="res://.godot/imported/Tiletest.png-2c381bd1484a92d88b356b53a9d38528.ctex"
+uid="uid://ducvnqolddb27"
+path="res://.godot/imported/T_caustics.png-a61639a33b6ae3d99755f7a2ee2e6747.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://environmentArt/Tiletest.png"
-dest_files=["res://.godot/imported/Tiletest.png-2c381bd1484a92d88b356b53a9d38528.ctex"]
+source_file="res://environmentArt/T_caustics.png"
+dest_files=["res://.godot/imported/T_caustics.png-a61639a33b6ae3d99755f7a2ee2e6747.ctex"]
 
 [params]
 
