@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cpm1ftdehfu6t" path="res://Scenes/causticsLight.tscn" id="1_jniv7"]
 [ext_resource type="PackedScene" uid="uid://ibp3xu6htpmh" path="res://Scenes/parallax.tscn" id="1_kirff"]
 [ext_resource type="FontFile" uid="uid://m2kfr6is2j7" path="res://environmentArt/PixelOperator-Bold.ttf" id="1_n6u10"]
+[ext_resource type="PackedScene" uid="uid://ntalublbf6o5" path="res://Scenes/StoryScenes/Intro_Cutscene.tscn" id="1_xeo02"]
 [ext_resource type="Texture2D" uid="uid://b4j7bdef6di6q" path="res://environmentArt/TS_underwaterEnvironment.png" id="2_iel4c"]
 [ext_resource type="PackedScene" uid="uid://bdvq0rd8kqxhk" path="res://Scenes/plankton.tscn" id="5_nausy"]
 [ext_resource type="PackedScene" uid="uid://6w85gtuakipv" path="res://Scenes/manOwar.tscn" id="6_stkqt"]
@@ -111,6 +112,9 @@ noise_type = 0
 frequency = 0.028
 
 [node name="LittleSlugger" type="Node2D" unique_id=419329215]
+
+[node name="Intro_Cutscene" parent="." unique_id=1418919124 node_paths=PackedStringArray("player") instance=ExtResource("1_xeo02")]
+player = NodePath("../Player/slug_player")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1856883757]
 
