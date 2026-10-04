@@ -17,8 +17,7 @@ func _ready() -> void:
 	_next_slide()
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept") \
-	or (event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT):
+	if event.is_action_pressed("ui_accept"):
 		get_viewport().set_input_as_handled()
 		_next_slide()
 
